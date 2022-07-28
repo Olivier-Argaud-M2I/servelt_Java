@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: olivi
@@ -9,4 +11,8 @@
 
 <div id="head">
     <h1>Le plus beau site au monde</h1>
+    <c:if test="${loggeduser !=null}">
+        <h2>Bienvenue ${loggeduser.prenom}</h2>
+        <a href="form?logout=true">Logout</a>
+    </c:if>
 </div>

@@ -19,6 +19,11 @@ public class FormServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         System.out.println("coucou get");
+        if (request.getParameter("logout")!=null){
+            request.getSession().removeAttribute("loggeduser");
+            System.out.println("logout");
+        }
+
 
         this.getServletContext().getRequestDispatcher(PAGE_FORM).forward(request, response);
     }
@@ -36,6 +41,8 @@ public class FormServlet extends HttpServlet {
                 request.getParameter("role"));
 
         request.setAttribute("user",user);
+
+        request.getSession().setAttribute("loggeduser",user);
 
         request.getHeaderNames().asIterator().forEachRemaining((h)->{
             System.out.println("header name : "+h);
