@@ -15,4 +15,8 @@
         <h2>Bienvenue ${loggeduser.prenom}</h2>
         <a href="form?logout=true">Logout</a>
     </c:if>
+    <c:if test="${filtre !=null}">
+        <h2>${filtre}</h2>
+
+    </c:if>
 </div>

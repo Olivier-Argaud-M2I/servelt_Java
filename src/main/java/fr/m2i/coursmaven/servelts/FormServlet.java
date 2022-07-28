@@ -44,10 +44,10 @@ public class FormServlet extends HttpServlet {
 
         request.getSession().setAttribute("loggeduser",user);
 
-        request.getHeaderNames().asIterator().forEachRemaining((h)->{
-            System.out.println("header name : "+h);
-            System.out.println("header value : "+request.getHeader(h));
-        });
+//        request.getHeaderNames().asIterator().forEachRemaining((h)->{
+//            System.out.println("header name : "+h);
+//            System.out.println("header value : "+request.getHeader(h));
+//        });
 
         String nav = request.getHeader("user-agent");
         request.setAttribute("nav",nav);

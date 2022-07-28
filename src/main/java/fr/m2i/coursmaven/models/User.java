@@ -70,4 +70,15 @@ public class User {
         this.age = age;
         this.role = role;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", mail='" + mail + '\'' +
+                ", age=" + age +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }
