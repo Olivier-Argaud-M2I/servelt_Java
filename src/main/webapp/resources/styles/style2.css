@@ -1,0 +1,26 @@
+body{
+    background-color: aqua;
+}
+
+div{
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    box-shadow: 5px 5px 5px black;
+    background-color: blueviolet;
+}
+
+a{
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 3em;
+    margin: 0.5em;
+    margin-top: 2em;
+    background-color: darkgray;
+
+}
+a:hover{
+    background-color: lightgray;
+    box-shadow: 5px 5px 5px black;
+}
