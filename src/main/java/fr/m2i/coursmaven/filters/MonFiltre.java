@@ -17,7 +17,7 @@ public class MonFiltre implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
 
-        if(((HttpServletRequest)request).getMethod().equals("POST")){
+        if(request instanceof HttpServletRequest && ((HttpServletRequest) request).getMethod().equals("POST")){
             request.setAttribute("filtre","passage par le filtre");
         }
 

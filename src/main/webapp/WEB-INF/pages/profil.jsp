@@ -12,7 +12,10 @@
 <html>
     <head>
         <title>Profil</title>
-        <link rel='stylesheet' type='text/css' href='/coursmaven/resources/styles/style2.css'>
+<%--        <link rel='stylesheet' type='text/css' href='/coursmaven/resources/styles/style2.css'>--%>
+
+        <link rel='stylesheet' type='text/css' href="<c:url value="/resources/styles/style2.css"/>">
+<%--        <link rel='stylesheet' type='text/css' href='../../resources/styles/style2.css'>--%>
         <jsp:include page="fragment/_style.jsp"/>
     </head>
     <body>

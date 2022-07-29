@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olivi
@@ -8,6 +9,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
-<link rel='stylesheet' type='text/css' href='/coursmaven/resources/styles/style3.css'>
-
+<%--<link rel='stylesheet' type='text/css' href='/coursmaven/resources/styles/style3.css'>--%>
+<link rel='stylesheet' type='text/css' href="<c:url value="/resources/styles/style3.css"/>">
 <%--<link rel='stylesheet' type='text/css' href='../../../resources/styles/style3.css'>--%>
