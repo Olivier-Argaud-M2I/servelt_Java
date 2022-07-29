@@ -3,6 +3,7 @@ package fr.m2i.coursmaven.filters;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
@@ -25,6 +26,9 @@ public class MonFiltre2 implements Filter {
         }
         else{
             request.getServletContext().getRequestDispatcher(PAGE).forward(request, response);
+//            if(response instanceof HttpServletResponse){
+//                ((HttpServletRequest) request).sen
+//            }
         }
 
     }
