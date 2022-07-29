@@ -17,6 +17,10 @@
     </c:if>
     <c:if test="${filtre !=null}">
         <h2>${filtre}</h2>
-
     </c:if>
+
+    <a href="Servlet2">page 2</a>
+    <a href="Servlet3">page 3</a>
+    <a href="Servlet4">page 4</a>
+
 </div>
