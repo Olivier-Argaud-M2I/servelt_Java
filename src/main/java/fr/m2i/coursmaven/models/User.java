@@ -1,9 +1,8 @@
 package fr.m2i.coursmaven.models;
 
 
-import java.beans.JavaBean;
 
-@JavaBean
+
 public class User {
 
     private String nom;
@@ -55,6 +54,11 @@ public class User {
     }
 
     public User() {
+    }
+
+    public User(String nom, String prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
     }
 
     public User(String nom, String prenom, String mail) {

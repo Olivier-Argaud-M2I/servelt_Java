@@ -1,5 +1,5 @@
 
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olivi
@@ -13,6 +13,8 @@
         <title>Title</title>
     </head>
     <body>
+<%--        <jsp:include page="WEB-INF/pages/fragment/_header.jsp"/>--%>
+
         <jsp:include page="WEB-INF/pages/fragment/_header.jsp"/>
         <a href="form">Formulaire</a>
         <jsp:include page="WEB-INF/pages/fragment/_footer.jsp"/>

@@ -1,8 +1,15 @@
 package fr.m2i.coursmaven.listerners;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.ServletRequestAttributeEvent;
+import javax.servlet.ServletRequestAttributeListener;
+import javax.servlet.annotation.WebListener;
+import javax.servlet.http.HttpSessionAttributeListener;
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionEvent;
+import javax.servlet.http.HttpSessionListener;
 
 @WebListener
 public class Listener implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener, ServletRequestAttributeListener {
@@ -61,11 +68,11 @@ public class Listener implements ServletContextListener, HttpSessionListener, Ht
 
     @Override
     public void attributeRemoved(ServletRequestAttributeEvent srae) {
-        ServletRequestAttributeListener.super.attributeRemoved(srae);
+
     }
 
     @Override
     public void attributeReplaced(ServletRequestAttributeEvent srae) {
-        ServletRequestAttributeListener.super.attributeReplaced(srae);
+
     }
 }

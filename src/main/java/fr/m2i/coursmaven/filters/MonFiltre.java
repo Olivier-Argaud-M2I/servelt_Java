@@ -1,8 +1,10 @@
 package fr.m2i.coursmaven.filters;
 
-import jakarta.servlet.*;
-import jakarta.servlet.annotation.*;
-import jakarta.servlet.http.HttpServletRequest;
+
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 
 import java.io.IOException;
 
