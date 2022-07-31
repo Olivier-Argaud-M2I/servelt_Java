@@ -3,6 +3,7 @@ package fr.m2i.coursmaven.services;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 import javax.ws.rs.*;
@@ -28,6 +29,13 @@ public class TacheResource {
     public Tache get(@PathParam("id")int id) {
 //		public Tache get(@PathParam ("id: [0-9]")int id) {
         return this.listTache.get(id);
+    }
+    @GET
+    @Path("/byName/{name}")
+    @Produces({MediaType.APPLICATION_JSON})
+    public Tache getByName(@PathParam("name")String name) {
+//		public Tache get(@PathParam ("id: [0-9]")int id) {
+        return this.listTache.stream().filter(tache -> tache.getNom().equals(name)).collect(Collectors.toList()).get(0);
     }
 
     @GET

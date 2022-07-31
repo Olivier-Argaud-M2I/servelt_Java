@@ -51,6 +51,12 @@
             </select>
         </div>
 
+        <div>
+            <select name="taches2" id="taches2">
+                <option value="">--Choissez une taches--</option>
+            </select>
+        </div>
+
 
 
         <fieldset>
@@ -104,22 +110,37 @@
                 .then((response) => response.json())
                 .then((data)=>{
                     let parent = document.getElementById('taches');
+                    let parent2 = document.getElementById('taches2');
                     console.table(data);
                     for(element of data){
                         let option = document.createElement('option');
                         option.data = element;
                         option.innerHTML = element.nom;
                         parent.appendChild(option);
+                        let option2 = document.createElement('option');
+                        option2.value = element.nom;
+                        option2.innerHTML = element.nom
+                        parent2.appendChild(option2)
                     }
                 });
 
 
             let tachesSelect = document.querySelector('#taches');
+            let tachesSelect2 = document.querySelector('#taches2');
             let inputNom = document.querySelector('#nom');
             let inputDescription = document.querySelector('#description');
             tachesSelect.addEventListener('change',()=>{
                 inputDescription.value = tachesSelect.options[tachesSelect.selectedIndex].data.description;
                 inputNom.value = tachesSelect.options[tachesSelect.selectedIndex].data.nom;
+            });
+
+            tachesSelect2.addEventListener('change',()=>{
+                fetch("/coursmaven/api/Tache/byName/"+tachesSelect2.options[tachesSelect2.selectedIndex].value)
+                    .then((response) => response.json())
+                    .then((data)=>{
+                        inputDescription.value = data.description;
+                        inputNom.value = data.nom;
+                    });
             });
 
         </script>
