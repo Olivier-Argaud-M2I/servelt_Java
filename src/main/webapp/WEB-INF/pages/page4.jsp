@@ -1,3 +1,9 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: olivi
@@ -12,6 +18,18 @@
     </head>
     <body>
         Page 4
+
+        <main>
+
+            <form action="<c:url value="/api/User"/>" method="POST">
+<%--            <form action="/coursmaven/api/User" method="PUT">--%>
+                <input type="text" name="nom">
+                <input type="text" name="prenom">
+                <input type="submit" value="envoyer">
+            </form>
+
+
+        </main>
 
 
     </body>
