@@ -17,18 +17,7 @@
         <title>Page 4</title>
     </head>
     <body>
-        Page 4
-
-        <main>
-
-            <form action="<c:url value="/api/User"/>" method="POST">
-                <input type="text" name="nom">
-                <input type="text" name="prenom">
-                <input type="submit" value="envoyer">
-            </form>
-
-
-        </main>
+        Page 5
 
 
     </body>

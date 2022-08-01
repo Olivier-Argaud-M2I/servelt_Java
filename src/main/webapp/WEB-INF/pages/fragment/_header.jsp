@@ -22,5 +22,6 @@
     <a href="Servlet2">page 2</a>
     <a href="Servlet3">page 3</a>
     <a href="Servlet4">page 4</a>
+    <a href="JDBC">page 5</a>
 
 </div>
