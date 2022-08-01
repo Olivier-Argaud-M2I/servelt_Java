@@ -138,6 +138,7 @@
                 fetch("/coursmaven/api/Tache/byName/"+tachesSelect2.options[tachesSelect2.selectedIndex].value)
                     .then((response) => response.json())
                     .then((data)=>{
+                        let toto;
                         inputDescription.value = data.description;
                         inputNom.value = data.nom;
                     });
