@@ -11,7 +11,7 @@ public class TestJDBCServlet extends HttpServlet {
     private static final String PAGE = "/WEB-INF/pages/page5.jsp";
 //    private static final String BDD = "jdbc:mysql://localhost:3306/M2I?serverTimezone=UTC";
     private static final String BDD = "jdbc:mysql://localhost:3306/sakila";
-    private static final String LOGIN = "admin ";
+    private static final String LOGIN = "admin";
     private static final String MDP = "admin";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
